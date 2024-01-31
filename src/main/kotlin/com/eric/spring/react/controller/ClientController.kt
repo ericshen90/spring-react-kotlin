@@ -22,6 +22,10 @@ class ClientController(@Qualifier("clientServiceImpl") private val clientService
     @GetMapping
     fun all() = clientService.all()
 
+    @GetMapping("/page")
+    fun page(@RequestParam(defaultValue = "1") page: Int, @RequestParam(defaultValue = "10") size: Int) =
+        clientService.page(page, size)
+
     @GetMapping("/{id}")
     fun get(@PathVariable id: Long) = clientService.get(id)
 

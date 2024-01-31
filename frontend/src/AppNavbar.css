@@ -1,0 +1,14 @@
+/* CSS样式 */
+.navbar {
+    background-color: #343a40; /* 设置背景色为深色 */
+    color: #ffffff; /* 设置文字颜色为浅色 */
+    padding: 15px; /* 设置内边距 */
+    display: flex;
+    justify-content: space-between; /* 将内容推送到两边 */
+    align-items: center; /* 垂直居中 */
+}
+
+.navbar-brand {
+    color: #ffffff; /* 设置链接文字颜色为浅色 */
+    text-decoration: none; /* 移除下划线 */
+}

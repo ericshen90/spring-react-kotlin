@@ -1,6 +1,7 @@
 package com.eric.spring.react.service
 
 import com.eric.spring.react.entity.Client
+import org.springframework.data.domain.Page
 
 
 /**
@@ -11,6 +12,8 @@ import com.eric.spring.react.entity.Client
 interface ClientService {
 
     fun all(): List<Client>
+
+    fun page(page: Int, size: Int): Page<Client>
 
     fun save(client: Client): Client
 
