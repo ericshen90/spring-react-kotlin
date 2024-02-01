@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service
 /**
  *
  *
- * @author shenbingtong (shenbingtong@corp.netease.com)
+ * @author ericshen (ahsbt@126.com)
  */
 @Service("clientServiceImpl")
 class ClientServiceImpl(private val clientRepository: ClientRepository): ClientService {

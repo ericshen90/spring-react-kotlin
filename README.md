@@ -1,27 +1,34 @@
 # Getting Started
 
+A CRUD program that uses React + Node + Yarn for the frontend, Kotlin + Spring Boot for the backend, and Gradle for the build tool.
+
 ### Reference Documentation
 
-For further reference, please consider the following sections:
+- [backend][backend-readme]
+- [frontend][frontend-readme]
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.2.2/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.2.2/gradle-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.2.2/reference/htmlsingle/index.html#web)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/3.2.2/reference/htmlsingle/index.html#data.sql.jpa-and-spring-data)
+### Requirements
 
-### Guides
+- A [Gradle Wrapper][gradle-wrapper] configured in this directory.
 
-The following guides illustrate how to use some features concretely:
+### Description
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
+The frontend sub-project builds an `index.html` file in its `build` directory. A custom task named
+`processFrontendResources`, and defined in the backend sub-project copies the previous file in the
+`build/resources/main/public` directory of the backend sub-project. The `processResources` task of the backend
+sub-project depends on this `processFrontendResources` task, to ensure frontend artifacts are included when building
+the WAR artifact: the `bootWar` task in the backend project automatically packages files in the
+`${project.buildDir}/resources/static` directory into the WAR artifact so as they are publicly accessible.
 
-### Additional Links
+Finally:
 
-These additional references should also help you:
+- Enter `gradlew bootRun` on a command line.
+- Open a browser, connect to URL `http://localhost:8080`, and see the following page.
 
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
-
+[backend-readme]: <backend/README.md> (Backend README)
+[frontend-readme]: <frontend/README.md> (Frontend README)
+[gradle-java-plugin]: <https://docs.gradle.org/current/userguide/java_plugin.html> (Gradle Java plugin)
+[gradle-spring-boot-plugin]: <https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/> (Gradle Spring Boot plugin)
+[gradle-war-plugin]: <https://docs.gradle.org/current/userguide/war_plugin.html> (Gradle WAR plugin)
+[gradle-wrapper]: <https://docs.gradle.org/current/userguide/gradle_wrapper.html> (Gradle Wrapper)
+[spring-boot]: <https://spring.io/projects/spring-boot> (Spring Boot)

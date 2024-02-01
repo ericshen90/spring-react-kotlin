@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository
 /**
  *
  *
- * @author shenbingtong (shenbingtong@corp.netease.com)
+ * @author ericshen (ahsbt@126.com)
  */
 interface ClientRepository : JpaRepository<Client, Long> {
 

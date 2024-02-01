@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 /**
  *
  *
- * @author shenbingtong (shenbingtong@corp.netease.com)
+ * @author ericshen (ahsbt@126.com)
  */
 @RestControllerAdvice
 class ExceptionHandler {

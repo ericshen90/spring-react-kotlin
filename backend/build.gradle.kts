@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "3.2.2"
     id("io.spring.dependency-management") version "1.1.4"
+    id("war")
 
     kotlin("jvm") version "1.9.21"
     kotlin("plugin.allopen") version "1.9.21"
@@ -50,4 +51,24 @@ tasks.withType<Test> {
 }
 kotlin {
     jvmToolchain(17)
+}
+
+tasks.register<Copy>("processFrontendResources") {
+    // Directory containing the artifacts produced by the frontend project
+    val frontendProjectBuildDir = project(":frontend").buildDir
+    val frontendBuildDir = file("${frontendProjectBuildDir}")
+    // Directory where the frontend artifacts must be copied to be packaged alltogether with the backend by the 'war'
+    // plugin.
+    val frontendResourcesDir = file("${project.buildDir}/resources/main/static")
+
+    group = "Frontend"
+    description = "Process frontend resources"
+    dependsOn(":frontend:assembleFrontend")
+
+    from(frontendBuildDir)
+    into(frontendResourcesDir)
+}
+
+tasks.named<Task>("processResources") {
+    dependsOn("processFrontendResources")
 }

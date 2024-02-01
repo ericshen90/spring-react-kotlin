@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component
 /**
  *
  *
- * @author shenbingtong (shenbingtong@corp.netease.com)
+ * @author ericshen (ahsbt@126.com)
  */
 @Component
 class BootstrapInitialData(private val clientService: ClientService) : CommandLineRunner{

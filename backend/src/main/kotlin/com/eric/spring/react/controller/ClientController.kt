@@ -12,7 +12,7 @@ import java.util.*
 /**
  *
  *
- * @author shenbingtong (shenbingtong@corp.netease.com)
+ * @author ericshen (ahsbt@126.com)
  */
 @RestController
 @RequestMapping("clients")

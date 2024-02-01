@@ -7,7 +7,7 @@ import org.springframework.data.domain.Page
 /**
  *
  *
- * @author shenbingtong (shenbingtong@corp.netease.com)
+ * @author ericshen (ahsbt@126.com)
  */
 interface ClientService {
 

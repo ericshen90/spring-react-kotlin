@@ -8,7 +8,7 @@ import jakarta.persistence.Id
 /**
  *
  *
- * @author shenbingtong (shenbingtong@corp.netease.com)
+ * @author ericshen (ahsbt@126.com)
  */
 @Entity
 class Client(
