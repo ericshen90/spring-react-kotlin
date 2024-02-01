@@ -22,6 +22,8 @@ The following guides illustrate how to use some features concretely:
 ### Additional Links
 
 These additional references should also help you:
-
+* [gradle-java-plugin](https://docs.gradle.org/current/userguide/java_plugin.htm)
+* [gradle-spring-boot-plugin](https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/)
+* [gradle-war-plugin](https://docs.gradle.org/current/userguide/war_plugin.html)
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 

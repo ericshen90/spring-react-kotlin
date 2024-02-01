@@ -27,8 +27,11 @@ Finally:
 
 [backend-readme]: <backend/README.md> (Backend README)
 [frontend-readme]: <frontend/README.md> (Frontend README)
-[gradle-java-plugin]: <https://docs.gradle.org/current/userguide/java_plugin.html> (Gradle Java plugin)
-[gradle-spring-boot-plugin]: <https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/> (Gradle Spring Boot plugin)
-[gradle-war-plugin]: <https://docs.gradle.org/current/userguide/war_plugin.html> (Gradle WAR plugin)
+
 [gradle-wrapper]: <https://docs.gradle.org/current/userguide/gradle_wrapper.html> (Gradle Wrapper)
 [spring-boot]: <https://spring.io/projects/spring-boot> (Spring Boot)
+
+### Reference
+
+- [CRUD Application With React and Spring Boot](https://www.baeldung.com/spring-boot-react-crud)
+- [frontend-gradle-plugin](https://siouan.github.io/frontend-gradle-plugin/getting-started)
